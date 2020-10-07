@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>RegEx To Automation By Ashwarya Rathore And Team</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Intro</a></li>
+							<li><a href="#two">Theoretical Conversion</a></li>
+							<li><a href="#three">Conversion By Program</a></li>
+							<li><a href="#four">Get in touch</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Formal Language And Automata</h1>
+							<p>A site designed by <a href="https://www.instagram.com/_bad.ash_/">Ashwarya Rathore</a></a> and the Team</a><br />
+							To convert a Regular Expression to NFA, DFA, Minimized DFA and check input strings</a>.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Regular Expression</h2>
+									<p>A regular expression can also be described as a sequence of pattern that defines a string. Regular expressions are used to match character combinations in strings. String searching algorithm used this pattern to find the operations on a string.</p>
+									<ul class="actions">
+										<li><a href="https://www.javatpoint.com/automata-regular-expression#:~:text=A%20regular%20expression%20can%20also,the%20operations%20on%20a%20string." class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>DFA</h2>
+									<p>Deterministic refers to the uniqueness of the computation. If the machine is read an input string one symbol at a time.<br /><br />
+										1. In DFA, there is only one path for specific input from the current state to the next state.<br />
+										2. DFA does not accept the null move, i.e., the DFA cannot change state without any input character.<br />
+										3. DFA can contain multiple final states. It is used in Lexical Analysis in Compiler.</p>
+									<ul class="actions">
+										<li><a href="https://www.javatpoint.com/deterministic-finite-automata" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>NFA</h2>
+									<p>The finite automata are called NFA when there exist many paths for specific input from the current state to the next state.<br />
+										1. Every NFA is not DFA, but each NFA can be translated into DFA.<br />
+										2. NFA is defined in the same way as DFA but with the following two exceptions, it contains multiple next states, and it contains ε transition.</p>
+									<ul class="actions">
+										<li><a href="https://www.javatpoint.com/non-deterministic-finite-automata" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Theoretical Conversion</h2>
+							<p>Let X = (Qx, ∑, δx, q0, Fx) be an NFA which accepts the language L(X). We have to design an equivalent DFA Y = (Qy, ∑, δy, q0, Fy) such that L(Y) = L(X). The following procedure converts the NFA to its equivalent DFA −</p>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Step 1</h3>
+									<p>Create state table from the given NFA.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-lock"></span>
+									<h3>Step 2</h3>
+									<p>Create a blank state table under possible input alphabets for the equivalent DFA.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h3>Step 3</h3>
+									<p>Mark the start state of the DFA by q0 Same as the NFA.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Step 4</h3>
+									<p>Find out the combination of States {Q0, Q1,... , Qn} for each possible input alphabet.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-link"></span>
+									<h3>Step 5</h3>
+									<p>Each time we generate a new DFA state under the input alphabet columns, we have to apply step 4 again, otherwise go to step 6.</p>
+								</section>
+								<section>
+									<span class="icon major fa-gem"></span>
+									<h3>Step 6</h3>
+									<p>The states which contain any of the final states of the NDFA are the final states of the equivalent DFA.</p>
+								</section>
+							</div>
+							<ul class="actions">
+								<li><a href="https://1drv.ms/w/s!AhSQPxG_EYYuhgJuQrRCQgjDB0wa?e=gWpe1T" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+					<section id="three" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Conversion by a C++ program</h1>
+							<p>A Program which convert any RegEx to any Automation and also check String acceptance</a><br />
+							Go ahead in below link to start converting now</a>.</p>
+							<ul class="actions">
+								<li><a href="https://onlinegdb.com/HyZofPjUP" class="button scrolly">Convert From My Code</a></li>
+							</ul><ul class="actions">
+								<li><a href="https://cyberzhg.github.io/toolbox/nfa2dfa" class="button scrolly">More Detailed One</a></li>
+								</ul>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="four" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get In Touch</h2>
+							<p>This is my Team :- <br/>1. Ashwarya Rathore - RA1811029010056<br/>2. Shefali Rai - RA1811029010062<br/>4. Shipra Kumari - RA1811029010051<br/>3. Pranav Singh - RA1811029010063<br/>5. Aaryan Sinha - RA1011029010036</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<span>CSE-CN / L2<br/>SRMIST, KTR<br />
+											Chennai<br />
+											India</span>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<a>ar3751@srmist.edu.in<br/>sr4942@srmist.edu.in<br/>sk3100@srmist.edu.in<br/>ps1055@srmist.edu.in<br/>as4935@srmist.edu.in</a>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<span>95882-37004<br/>63532-18157<br/>95146-20606<br/>74081-86999<br/>92052-56322</span>
+										</li>
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="https://www.instagram.com/_bad.ash_/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://instagram.com/_shefali._.rai_2000" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://instagram.com/_shipra._sharma_?igshid=jcv1avme49v5" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://instagram.com/harshvsingh23" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://instagram.com/arryan_999?igshid=1ilqfaho87iid" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li><br/>
+												<li><a href="https://github.com/AshwaryaRathore" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://github.com/shefali-hash" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://github.com/shipra901" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://github.com/Happycipher" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://github.com/arryan231" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												
+												
+												
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; <a href="https://github.com/AshwaryaRathore">Ashwarya Rathore | All rights reserved.</li><li>Design : <a href="https://www.instagram.com/_bad.ash_/">Ashwarya Rathore</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
